@@ -1,0 +1,30 @@
+<meta charset="UTF-8" />
+
+<script>
+  function pulaLinha() {
+    document.write('<br><br>')
+  }
+
+  function mostra(frase) {
+    document.write(frase)
+    pulaLinha()
+  }
+
+  function sorteia(n) {
+    return Math.round(Math.random() * n)
+  }
+
+  var numeroPensado = sorteia(10)
+
+  var palpite = parseInt(prompt('Que número eu estou pensando?'))
+
+  if (palpite == numeroPensado) {
+    mostra('Parabéns! Você acertou. Eu pensei no número ' + numeroPensado)
+  } else {
+    if (palpite > numeroPensado) {
+      mostra('Você não acertou. Eu pensei em um número maior que ' + palpite)
+    } else {
+      mostra('Você não acertou. Eu pensei em um número menor que ' + palpite)
+    }
+  }
+</script>
